@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hadley Bell | Agriculture, Business & Marketing</title>
+
+    <style>
+
+        /* =========================
+           GENERAL STYLING
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #26382a;
+            background-color: #f7f6f1;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid #e5e4dc;
+        }
+
+        .nav-container {
+            height: 80px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #304b32;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #344438;
+            font-size: 15px;
+            font-weight: 600;
+
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #78905a;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(37, 59, 39, 0.78),
+                    rgba(37, 59, 39, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            padding: 100px 0;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #dce5c8;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(55px, 9vw, 100px);
+            line-height: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #d5dfbd;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            font-size: 21px;
+            line-height: 1.7;
+            color: #eef1e8;
+            margin-bottom: 40px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+            font-size: 15px;
+
+            transition: all 0.3s ease;
+        }
+
+        .button-primary {
+            background: #d6dfbd;
+            color: #304b32;
+        }
+
+        .button-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .button-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .button-outline:hover {
+            background: white;
+            color: #304b32;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           INTRO SECTION
+        ========================== */
+
+        .intro {
+            padding: 110px 0;
+            background: #f7f6f1;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #78905a;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .intro h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            line-height: 1.15;
+            color: #304b32;
+        }
+
+        .intro-text p {
+            color: #58645a;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           HIGHLIGHTS
+        ========================== */
+
+        .highlights {
+            padding: 90px 0;
+            background: white;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading h2 {
+            font-family: Georgia, serif;
+            font-size: 44px;
+            color: #304b32;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #687168;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 40px 30px;
+
+            background: #f5f5ef;
+
+            border: 1px solid #e6e6dc;
+            border-radius: 10px;
+
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(38, 56, 42, 0.10);
+        }
+
+        .card-icon {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            color: #304b32;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #626b63;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           EXPERIENCE SECTION
+        ========================== */
+
+        .experience {
+            padding: 110px 0;
+            background: #304b32;
+            color: white;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .experience h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            line-height: 1.15;
+            color: white;
+        }
+
+        .experience-intro {
+            color: #dce3d9;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .experience-list {
+            border-left: 2px solid #92a878;
+            padding-left: 30px;
+        }
+
+        .experience-item {
+            margin-bottom: 35px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            color: #e1e8d0;
+            margin-bottom: 8px;
+        }
+
+        .experience-item p {
+            color: #d4ddd3;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education {
+            padding: 100px 0;
+            background: #f7f6f1;
+        }
+
+        .education-box {
+            max-width: 900px;
+            margin: auto;
+
+            background: white;
+
+            padding: 50px;
+
+            border-left: 6px solid #78905a;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+
+        .education-box h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            color: #304b32;
+            margin-bottom: 10px;
+        }
+
+        .university {
+            font-size: 21px;
+            font-weight: bold;
+            color: #52664f;
+            margin-bottom: 15px;
+        }
+
+        .education-box p {
+            color: #626b63;
+            margin-bottom: 10px;
+        }
+
+        .emphasis {
+            font-weight: bold;
+            color: #304b32;
+        }
+
+
+        /* =========================
+           PORTFOLIO PREVIEW
+        ========================== */
+
+        .portfolio {
+            padding: 110px 0;
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            min-height: 300px;
+
+            padding: 30px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            color: white;
+
+            background-size: cover;
+            background-position: center;
+
+            position: relative;
+        }
+
+        .portfolio-card::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+                transparent,
+                rgba(25, 40, 27, 0.9)
+            );
+        }
+
+        .portfolio-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .portfolio-card h3 {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-card p {
+            color: #e7ece3;
+        }
+
+        .portfolio-one {
+            background-image:
+                url("https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1000&q=80");
+        }
+
+        .portfolio-two {
+            background-image:
+                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80");
+        }
+
+        .portfolio-three {
+            background-image:
+                url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80");
+        }
+
+
+        /* =========================
+           CALL TO ACTION
+        ========================== */
+
+        .cta {
+            padding: 110px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(48, 75, 50, 0.94),
+                    rgba(48, 75, 50, 0.94)
+                );
+            
+            color: white;
+        }
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+
+            color: #dfe6dc;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #202c21;
+            color: #cbd3c9;
+            padding: 35px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-name {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .nav-container {
+                height: auto;
+                padding: 20px 0;
+
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .intro-grid,
+            .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .cards,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro h2,
+            .experience h2 {
+                font-size: 38px;
+            }
+
+            .section-heading h2 {
+                font-size: 36px;
+            }
+
+            .education-box {
+                padding: 35px 25px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero-content {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .intro,
+            .highlights,
+            .experience,
+            .education,
+            .portfolio {
+                padding: 75px 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="container nav-container">
+
+            <div class="logo">
+                Hadley Bell
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#focus">Focus</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Agriculture • Business • Communication
+                </div>
+
+                <h1>
+                    Hello, I'm
+                    <span>Hadley.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I am an Agricultural Studies student at Iowa State University
+                    passionate about connecting agriculture, business, marketing,
+                    and communication to create meaningful opportunities for
+                    growth and success.
+                </p>
+
+                <div class="button-group">
+
+                    <a href="#about" class="button button-primary">
+                        Get to Know Me
+                    </a>
+
+                    <a href="#portfolio" class="button button-outline">
+                        View My Work
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="intro" id="about">
+
+        <div class="container intro-grid">
+
+            <div>
+
+                <div class="section-label">
+                    About Me
+                </div>
+
+                <h2>
+                    Bringing ideas, people, and agriculture together.
+                </h2>
+
+            </div>
+
+
+            <div class="intro-text">
+
+                <p>
+                    I am a junior at Iowa State University majoring in
+                    Agricultural Studies with emphasis areas in Agricultural
+                    Communications, Agricultural Business, and Marketing.
+                </p>
+
+                <p>
+                    I am passionate about finding ways to connect the
+                    agricultural industry with strong business strategies
+                    and effective communication.
+                </p>
+
+                <p>
+                    My experiences managing business social media platforms,
+                    developing marketing strategies, and owning a business
+                    have helped me develop skills in brand promotion,
+                    audience engagement, leadership, and digital communication.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AREAS OF FOCUS
+    ========================== -->
+
+    <section class="highlights" id="focus">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    Areas of Focus
+                </div>
+
+                <h2>
+                    What I'm passionate about
+                </h2>
+
+                <p>
+                    My interests sit at the intersection of agriculture,
+                    business, marketing, and communication.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Agriculture
+                    </h3>
+
+                    <p>
+                        Developing a deeper understanding of the agricultural
+                        industry and exploring ways to contribute to its
+                        continued growth and success.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📣
+                    </div>
+
+                    <h3>
+                        Communication
+                    </h3>
+
+                    <p>
+                        Creating meaningful connections through storytelling,
+                        digital communication, social media, and audience
+                        engagement.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📈
+                    </div>
+
+                    <h3>
+                        Business & Marketing
+                    </h3>
+
+                    <p>
+                        Developing strategies that strengthen brands,
+                        connect with audiences, and create opportunities
+                        for sustainable growth.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section class="experience" id="experience">
+
+        <div class="container experience-grid">
+
+
+            <div>
+
+                <div class="section-label">
+                    Experience
+                </div>
+
+                <h2>
+                    Learning by doing.
+                </h2>
+
+                <p class="experience-intro">
+                    My experiences have given me the opportunity to apply
+                    classroom knowledge to real-world business and
+                    communication challenges.
+                </p>
+
+            </div>
+
+
+            <div class="experience-list">
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        Business Ownership
+                    </h3>
+
+                    <p>
+                        As a business owner, I have gained firsthand
+                        experience with leadership, innovation, decision
+                        making, customer relationships, and the importance
+                        of building a strong brand.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        Social Media Management
+                    </h3>
+
+                    <p>
+                        Managing business social media platforms has helped
+                        me develop skills in content creation, brand
+                        promotion, audience engagement, and digital
+                        communication.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        Marketing Strategy
+                    </h3>
+
+                    <p>
+                        I enjoy developing marketing strategies that help
+                        businesses communicate their message, reach their
+                        target audiences, and create meaningful connections.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section class="education">
+
+        <div class="container">
+
+            <div class="education-box">
+
+                <div class="section-label">
+                    Education
+                </div>
+
+                <h2>
+                    Iowa State University
+                </h2>
+
+                <div class="university">
+                    Agricultural Studies
+                </div>
+
+                <p>
+                    Junior • Iowa State University
+                </p>
+
+                <p>
+                    My studies combine agricultural knowledge with business
+                    and communication skills to prepare me for opportunities
+                    within the agricultural industry.
+                </p>
+
+                <p>
+                    <span class="emphasis">
+                        Emphasis Areas:
+                    </span>
+                    Agricultural Communications,
+                    Agricultural Business, and Marketing
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PORTFOLIO
+    ========================== -->
+
+    <section class="portfolio" id="portfolio">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    Portfolio
+                </div>
+
+                <h2>
+                    What I bring to the table
+                </h2>
+
+                <p>
+                    A combination of creativity, communication, business
+                    knowledge, and agricultural perspective.
+                </p>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+
+                <div class="portfolio-card portfolio-one">
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Agriculture
+                        </h3>
+
+                        <p>
+                            Exploring the future of agriculture and
+                            opportunities within the industry.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card portfolio-two">
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Marketing
+                        </h3>
+
+                        <p>
+                            Building brands and creating strategies that
+                            connect businesses with their audiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card portfolio-three">
+
+                    <div class="portfolio-content">
+
+                        <h3>
+                            Communication
+                        </h3>
+
+                        <p>
+                            Turning ideas into meaningful stories,
+                            content, and connections.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+
+    <section class="cta" id="contact">
+
+        <div class="container">
+
+            <div class="section-label">
+                Let's Connect
+            </div>
+
+            <h2>
+                Let's create something meaningful.
+            </h2>
+
+            <p>
+                I am always interested in opportunities to learn, grow,
+                build relationships, and contribute to the agricultural
+                industry through communication and business.
+            </p>
+
+            <div class="button-group" style="justify-content:center;">
+
+                <!-- CHANGE THIS EMAIL -->
+                <a
+                    href="mailto:YOUR-EMAIL@example.com"
+                    class="button button-primary"
+                >
+                    Get in Touch
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <div class="footer-name">
+                Hadley Bell
+            </div>
+
+            <div class="footer-text">
+                Agriculture • Business • Marketing • Communication
+            </div>
+
+            <div class="footer-text">
+                © 2026 Hadley Bell
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
