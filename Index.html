@@ -6,7 +6,7 @@
     <title>Hadley Bell | Ag Business & Digital Strategy</title>
     <style>
         :root {
-            --primary-color: #006633; /* Ag Green */
+            --primary-color: #006633; /* Iowa State / Ag Green */
             --secondary-color: #333333;
             --background-color: #f8f9fa;
             --card-background: #ffffff;
@@ -23,59 +23,46 @@
             padding: 0;
         }
 
-        /* Navigation Bar Styling */
-        nav {
-            background-color: var(--primary-color);
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1.5rem;
-        }
-
-        .nav-brand {
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li a {
-            display: block;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 1rem 1rem;
-            font-weight: 500;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Page Layout */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1.5rem;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .affiliation {
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
         }
 
         section {
@@ -86,23 +73,36 @@
             margin-bottom: 2rem;
         }
 
-        h1, h2 {
-            color: var(--primary-color);
-        }
-
         h2 {
+            color: var(--primary-color);
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
             margin-top: 0;
         }
 
-        /* Dynamic View Toggle */
-        .page-view {
-            display: none;
+        ul {
+            padding-left: 1.2rem;
         }
 
-        .page-view.active {
-            display: block;
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--background-color);
+            color: var(--primary-color);
         }
 
         footer {
@@ -115,124 +115,88 @@
 </head>
 <body>
 
-    <div id="navbar-placeholder"></div>
-
     <div class="container">
-        
-        <main id="about-me" class="page-view active">
-            <section>
-                <h1>Hadley Bell</h1>
-                <p><strong>Agricultural Studies | Ag Business, Communications & Marketing</strong><br>
-                <em>Iowa State University</em></p>
-                <p>Hi, I'm Hadley Bell, an Agricultural Studies junior at Iowa State University specializing in Ag Communications, Ag Business, and Marketing.</p>
-                <p>With hands-on experience running a business and managing digital marketing strategies, I focus on brand promotion, audience engagement, and strategic communication. I thrive at the intersection of business and agriculture, where innovation and strong relationships drive long-term growth for the industry.</p>
-            </section>
-        </main>
+        <header>
+            <h1>Hadley Bell</h1>
+            <div class="subtitle">Agricultural Studies | Ag Business, Communications & Marketing</div>
+            <div class="affiliation">Iowa State University</div>
+            <div class="links">
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="mailto:your.email@iastate.edu">Contact Me</a>
+            </div>
+        </header>
 
-        <main id="schooling" class="page-view">
-            <section>
-                <h2>Schooling & Education</h2>
-                <h3>Iowa State University</h3>
-                <p><strong>Degree:</strong> Bachelor of Science in Agricultural Studies</p>
-                <p><strong>Class Standing:</strong> Junior</p>
-                <p><strong>Emphasis Areas:</strong></p>
-                <ul>
-                    <li>Agricultural Business</li>
-                    <li>Agricultural Communications</li>
-                    <li>Marketing</li>
-                </ul>
-            </section>
-        </main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hi, I'm Hadley Bell, an Agricultural Studies junior at Iowa State University specializing in Ag Communications, Ag Business, and Marketing.</p>
+            <p>With hands-on experience running a business and managing digital marketing strategies, I focus on brand promotion, audience engagement, and strategic communication. I thrive at the intersection of business and agriculture, where innovation and strong relationships drive long-term growth for the industry.</p>
+        </section>
 
-        <main id="work-experience" class="page-view">
-            <section>
-                <h2>Work Experience</h2>
-                <h3>Business Owner & Entrepreneur</h3>
-                <p><em>Independent Enterprise</em></p>
-                <ul>
-                    <li>Founded and manage an independent business, overseeing daily operations, financial tracking, and client relations.</li>
-                    <li>Execute custom marketing plans that increase client reach and brand awareness.</li>
-                </ul>
+        <section>
+            <h2>Areas of Expertise</h2>
+            <ul>
+                <li><strong>Agricultural Business:</strong> Entrepreneurial strategy, operations, and relationship building.</li>
+                <li><strong>Digital Communication:</strong> Social media management, content creation, and brand messaging.</li>
+                <li><strong>Marketing & Promotion:</strong> Audience engagement, campaign design, and growth strategy.</li>
+            </ul>
+        </section>
 
-                <h3>Digital Marketing & Social Media Manager</h3>
-                <ul>
-                    <li>Developed and executed targeted social media strategies for regional ag businesses.</li>
-                    <li>Designed multimedia assets, promotional copy, and newsletters tailored to agricultural audiences.</li>
-                </ul>
-            </section>
-        </main>
+        <section>
+            <h2>Featured Work & Projects</h2>
+            <h3>🌾 Business & Brand Strategy</h3>
+            <ul>
+                <li><strong>Entrepreneurship:</strong> Founded and manage an independent business, overseeing daily operations, marketing, and client relations.</li>
+                <li><strong>Digital Marketing Campaigns:</strong> Developed and executed targeted social media strategies to boost brand awareness and customer engagement for agricultural enterprises.</li>
+            </ul>
 
-        <main id="personal" class="page-view">
-            <section>
-                <h2>Personal & Leadership</h2>
-                <p>Outside of academics and business operations, I am passionate about leadership development, staying involved in industry associations, and continuous skill building in multimedia design.</p>
-                <ul>
-                    <li><strong>Location:</strong> Ames, Iowa</li>
-                    <li><strong>Interests:</strong> Agricultural Innovation, Visual Storytelling, Strategic Leadership</li>
-                    <li><strong>Contact:</strong> <a href="mailto:your.email@iastate.edu">your.email@iastate.edu</a></li>
-                </ul>
-            </section>
-        </main>
+            <h3>📢 Communications & Media</h3>
+            <ul>
+                <li><strong>Content Creation:</strong> Designed multimedia assets, newsletters, and promotional copy tailored to regional ag audiences.</li>
+                <li><strong>Audience Analytics:</strong> Tracked and optimized engagement metrics across digital platforms to refine messaging and reach.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technical & Professional Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Industry Knowledge</strong></td>
+                        <td>Agribusiness Strategy, Ag Marketing, Brand Positioning, Public Relations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Digital Tools</strong></td>
+                        <td>Social Media Analytics, Content Management Systems (CMS), Canva, Adobe Creative Suite</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Core Competencies</strong></td>
+                        <td>Leadership, Strategic Planning, Relationship Building, Visual Storytelling</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Contact & Connect</h2>
+            <p>I am always interested in connecting with fellow ag-business professionals, innovators, and communicators.</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:your.email@iastate.edu">your.email@iastate.edu</a></li>
+                <li><strong>Location:</strong> Ames, Iowa</li>
+                <li><strong>Connect:</strong> <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a></li>
+            </ul>
+        </section>
 
         <footer>
             <p>&copy; Hadley Bell. All rights reserved.</p>
         </footer>
     </div>
 
-    <script>
-        // 1. Navigation items data structure
-        const navItems = [
-            { label: 'About Me', targetId: 'about-me' },
-            { label: 'Schooling', targetId: 'schooling' },
-            { label: 'Work Experience', targetId: 'work-experience' },
-            { label: 'Personal', targetId: 'personal' }
-        ];
-
-        // 2. Function to dynamically generate and insert navbar HTML
-        function buildNavbar() {
-            const navContainer = document.createElement('nav');
-            
-            let linksHTML = navItems.map((item, index) => {
-                const isActive = index === 0 ? 'class="active"' : '';
-                return `<li><a ${isActive} onclick="switchTab('${item.targetId}', this)">${item.label}</a></li>`;
-            }).join('');
-
-            navContainer.innerHTML = `
-                <div class="nav-container">
-                    <a href="#" class="nav-brand" onclick="switchTab('about-me', document.querySelectorAll('.nav-links a')[0])">Hadley Bell</a>
-                    <ul class="nav-links">
-                        ${linksHTML}
-                    </ul>
-                </div>
-            `;
-
-            // Replace placeholder content with the constructed navbar
-            document.getElementById('navbar-placeholder').replaceWith(navContainer);
-        }
-
-        // 3. Function to handle switching visible content sections
-        function switchTab(targetId, clickedEl) {
-            // Hide all content pages
-            const pages = document.querySelectorAll('.page-view');
-            pages.forEach(page => page.classList.remove('active'));
-
-            // Show selected content page
-            const selectedPage = document.getElementById(targetId);
-            if (selectedPage) {
-                selectedPage.classList.add('active');
-            }
-
-            // Update active state on link items
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => link.classList.remove('active'));
-            
-            if (clickedEl) {
-                clickedEl.classList.add('active');
-            }
-        }
-
-        // Initialize menu on document load
-        document.addEventListener('DOMContentLoaded', buildNavbar);
-    </script>
 </body>
 </html>
