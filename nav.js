@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Home", url: "index.html" },
         { name: "About Us", url: "about.html" },
         { name: "Services", url: "services.html" },
-        { name: "Contact", url: "contact.html" }
+        { name: "Email: hadleyb@iastate.edu", url: "mailto:hadleyb@iastate.edu" },
+        { name: "Phone: 641-414-1489", url: "tel:6414141489" },
+        { name: "LinkedIn", url: "https://www.linkedin.com", target: "_blank" }
     ];
 
     const secondaryLinks = [
@@ -21,6 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const a = document.createElement("a");
             a.href = link.url;
             a.textContent = link.name;
+            if (link.target) {
+                a.target = link.target;
+                a.rel = "noopener noreferrer";
+            }
             navContainer.appendChild(a);
         });
         return navContainer;
@@ -34,20 +40,24 @@ document.addEventListener("DOMContentLoaded", () => {
             const a = document.createElement("a");
             a.href = link.url;
             a.textContent = link.name;
+            if (link.target) {
+                a.target = link.target;
+                a.rel = "noopener noreferrer";
+            }
             li.appendChild(a);
             ul.appendChild(li);
         });
         return ul;
     }
 
-    // Insert Links Into Top Header Nav Containers (Horizontal)
+    // Insert Links Into Top Header Nav Containers
     const topPrimaryNav = document.getElementById("top-primary-nav");
     if (topPrimaryNav) topPrimaryNav.appendChild(buildHorizontalNav(primaryLinks));
 
     const topSecondaryNav = document.getElementById("top-secondary-nav");
     if (topSecondaryNav) topSecondaryNav.appendChild(buildHorizontalNav(secondaryLinks));
 
-    // Insert Links Into Side Nav Containers (Vertical)
+    // Insert Links Into Side Nav Containers
     const sidePrimaryNav = document.getElementById("side-primary-nav");
     if (sidePrimaryNav) sidePrimaryNav.appendChild(buildVerticalNavList(primaryLinks));
 
