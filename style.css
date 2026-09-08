@@ -1,0 +1,155 @@
+/* style.css */
+
+/* Reset & Basic Box Model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body / Background Area with 10% margin on sides and lavender color */
+body {
+    background-color: #E6E6FA; /* Lavender background */
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 0 10%; /* 10% margin on left and right sides */
+    min-height: 100vh;
+}
+
+/* Main Outer Container */
+.site-container {
+    background-color: #ffffff;
+    border: 2px solid #000;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    border-bottom: 2px solid #000;
+}
+
+.logo-area {
+    width: 25%;
+    border-right: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header-right {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-info-graphics {
+    border-bottom: 1px solid #000;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-nav-top, .secondary-nav-top {
+    border-bottom: 1px solid #000;
+    padding: 8px 15px;
+    text-align: center;
+}
+
+.secondary-nav-top {
+    border-bottom: none;
+}
+
+/* Middle Content Layout Area */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+    border-bottom: 2px solid #000;
+}
+
+/* Left Sidebar Navigation */
+.left-sidebar {
+    width: 20%;
+    border-right: 2px solid #000;
+    padding: 15px;
+}
+
+.nav-section {
+    margin-bottom: 20px;
+}
+
+.nav-section h4 {
+    margin-bottom: 8px;
+}
+
+.nav-section ul {
+    list-style: none;
+}
+
+.nav-section li {
+    margin-bottom: 5px;
+}
+
+.nav-section a {
+    color: #0000ee;
+    text-decoration: none;
+}
+
+.nav-section a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+.main-content {
+    width: 55%;
+    padding: 20px;
+    border-right: 2px solid #000;
+}
+
+.hero-image {
+    border: 2px solid #000;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Right Sticky Sidebar Content */
+.right-sidebar {
+    width: 25%;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+.sticky-content h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.sticky-content ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.sticky-content li {
+    margin-bottom: 6px;
+}
+
+/* Footer Section */
+footer {
+    padding: 15px 20px;
+    font-size: 0.85rem;
+    text-align: left;
+    background-color: #fff;
+}
