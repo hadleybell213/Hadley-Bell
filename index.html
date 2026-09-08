@@ -3,198 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadley Bell | Ag Business & Digital Strategy</title>
-    <style>
-        :root {
-            --primary-color: #006633; /* Iowa State / Ag Green */
-            --secondary-color: #333333;
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --text-color: #212529;
-            --border-color: #e9ecef;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        h1 {
-            color: var(--primary-color);
-            margin: 0 0 0.5rem 0;
-            font-size: 2.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 0.25rem;
-        }
-
-        .affiliation {
-            color: #6c757d;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        .links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            margin-right: 1rem;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            background: var(--card-background);
-            padding: 1.5rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 0.75rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background-color: var(--background-color);
-            color: var(--primary-color);
-        }
-
-        footer {
-            text-align: center;
-            color: #6c757d;
-            font-size: 0.9rem;
-            padding-top: 1rem;
-        }
-    </style>
+    <title>GitHub Page Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
 
-    <div class="container">
+    <div class="site-container">
+        <!-- Header -->
         <header>
-            <h1>Hadley Bell</h1>
-            <div class="subtitle">Agricultural Studies | Ag Business, Communications & Marketing</div>
-            <div class="affiliation">Iowa State University</div>
-            <div class="links">
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://github.com" target="_blank">GitHub</a>
-                <a href="mailto:your.email@iastate.edu">Contact Me</a>
+            <div class="logo-area">
+                <h1>Logo</h1>
+            </div>
+            <div class="header-right">
+                <div class="header-info-graphics">
+                    This area is for informational graphics which describe in images what your site is about
+                </div>
+                <div class="top-nav">
+                    <div class="primary-nav-top" id="top-primary-nav">Primary navigation</div>
+                    <div class="secondary-nav-top" id="top-secondary-nav">Secondary navigation if needed</div>
+                </div>
             </div>
         </header>
 
-        <section>
-            <h2>About Me</h2>
-            <p>Hi, I'm Hadley Bell, an Agricultural Studies junior at Iowa State University specializing in Ag Communications, Ag Business, and Marketing.</p>
-            <p>With hands-on experience running a business and managing digital marketing strategies, I focus on brand promotion, audience engagement, and strategic communication. I thrive at the intersection of business and agriculture, where innovation and strong relationships drive long-term growth for the industry.</p>
-        </section>
+        <!-- Main Wrapper -->
+        <div class="main-wrapper">
+            <!-- Left Sidebar Navigation -->
+            <aside class="left-sidebar">
+                <div class="nav-section">
+                    <h4>Primary Navigation</h4>
+                    <div id="side-primary-nav"></div>
+                </div>
+                <div class="nav-section">
+                    <h4>Secondary Navigation</h4>
+                    <div id="side-secondary-nav"></div>
+                </div>
+            </aside>
 
-        <section>
-            <h2>Areas of Expertise</h2>
-            <ul>
-                <li><strong>Agricultural Business:</strong> Entrepreneurial strategy, operations, and relationship building.</li>
-                <li><strong>Digital Communication:</strong> Social media management, content creation, and brand messaging.</li>
-                <li><strong>Marketing & Promotion:</strong> Audience engagement, campaign design, and growth strategy.</li>
-            </ul>
-        </section>
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div class="hero-image">
+                    <h2>Hero image at top</h2>
+                </div>
+                <h2>Main content area</h2>
+                <p style="margin-top: 10px; line-height: 1.5;">
+                    This area HAS to contain html text and images (ie not image text). Text should be around 400 words and contain 5-7% keywords...
+                </p>
+            </main>
 
-        <section>
-            <h2>Featured Work & Projects</h2>
-            <h3>🌾 Business & Brand Strategy</h3>
-            <ul>
-                <li><strong>Entrepreneurship:</strong> Founded and manage an independent business, overseeing daily operations, marketing, and client relations.</li>
-                <li><strong>Digital Marketing Campaigns:</strong> Developed and executed targeted social media strategies to boost brand awareness and customer engagement for agricultural enterprises.</li>
-            </ul>
+            <!-- Sticky Right Sidebar -->
+            <aside class="right-sidebar">
+                <div class="sticky-content">
+                    <h3>Sticky content such as</h3>
+                    <ul>
+                        <li>news items</li>
+                        <li>adverts</li>
+                        <li>offers</li>
+                        <li>general site info</li>
+                        <li>Social Networking icons</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
 
-            <h3>📢 Communications & Media</h3>
-            <ul>
-                <li><strong>Content Creation:</strong> Designed multimedia assets, newsletters, and promotional copy tailored to regional ag audiences.</li>
-                <li><strong>Audience Analytics:</strong> Tracked and optimized engagement metrics across digital platforms to refine messaging and reach.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Technical & Professional Skills</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Skills</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Industry Knowledge</strong></td>
-                        <td>Agribusiness Strategy, Ag Marketing, Brand Positioning, Public Relations</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Digital Tools</strong></td>
-                        <td>Social Media Analytics, Content Management Systems (CMS), Canva, Adobe Creative Suite</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Core Competencies</strong></td>
-                        <td>Leadership, Strategic Planning, Relationship Building, Visual Storytelling</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Contact & Connect</h2>
-            <p>I am always interested in connecting with fellow ag-business professionals, innovators, and communicators.</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:your.email@iastate.edu">your.email@iastate.edu</a></li>
-                <li><strong>Location:</strong> Ames, Iowa</li>
-                <li><strong>Connect:</strong> <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a></li>
-            </ul>
-        </section>
-
+        <!-- Footer -->
         <footer>
-            <p>&copy; Hadley Bell. All rights reserved.</p>
+            Footer: Contains copyright info, current year, primary links, contact, privacy statement, webmaster email address
         </footer>
     </div>
 
