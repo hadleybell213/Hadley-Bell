@@ -7,11 +7,12 @@
     padding: 0;
 }
 
-/* Body / Background Area with 10% margin on sides and lavender color */
+/* Global Font Setup & Body Margins */
 body {
+    /* Aptos Narrow with standard fallbacks */
+    font-family: "Aptos Narrow", "Arial Narrow", "Calibri", sans-serif;
     background-color: #E6E6FA; /* Lavender background */
-    font-family: Arial, sans-serif;
-    color: #333;
+    color: #4B0082; /* Dark Purple default text */
     padding: 0 10%; /* 10% margin on left and right sides */
     min-height: 100vh;
 }
@@ -19,7 +20,7 @@ body {
 /* Main Outer Container */
 .site-container {
     background-color: #ffffff;
-    border: 2px solid #000;
+    border: 2px solid #4B0082; /* Dark Purple Border */
     margin: 20px 0;
     display: flex;
     flex-direction: column;
@@ -28,12 +29,12 @@ body {
 /* Header Section */
 header {
     display: flex;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #4B0082; /* Dark Purple Border */
 }
 
 .logo-area {
     width: 25%;
-    border-right: 2px solid #000;
+    border-right: 2px solid #4B0082; /* Dark Purple Border */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,37 +48,62 @@ header {
 }
 
 .header-info-graphics {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #4B0082; /* Dark Purple Border */
     padding: 15px;
     font-size: 0.9rem;
 }
 
+/* Top Navigation Section */
 .top-nav {
     display: flex;
     flex-direction: column;
 }
 
 .primary-nav-top, .secondary-nav-top {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #4B0082; /* Dark Purple Border */
     padding: 8px 15px;
-    text-align: center;
 }
 
 .secondary-nav-top {
     border-bottom: none;
 }
 
+/* Horizontal styling for Top Navigation Lists */
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* NAVIGATION LINK STYLES (Dark Purple -> Pink on hover) */
+nav a, 
+.top-nav a, 
+.left-sidebar a {
+    color: #4B0082; /* Dark Purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+nav a:hover, 
+.top-nav a:hover, 
+.left-sidebar a:hover {
+    color: #FF69B4; /* Pink */
+    text-decoration: underline;
+}
+
 /* Middle Content Layout Area */
 .main-wrapper {
     display: flex;
     flex: 1;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #4B0082; /* Dark Purple Border */
 }
 
 /* Left Sidebar Navigation */
 .left-sidebar {
     width: 20%;
-    border-right: 2px solid #000;
+    border-right: 2px solid #4B0082; /* Dark Purple Border */
     padding: 15px;
 }
 
@@ -94,27 +120,18 @@ header {
 }
 
 .nav-section li {
-    margin-bottom: 5px;
-}
-
-.nav-section a {
-    color: #0000ee;
-    text-decoration: none;
-}
-
-.nav-section a:hover {
-    text-decoration: underline;
+    margin-bottom: 8px;
 }
 
 /* Main Content Area */
 .main-content {
     width: 55%;
     padding: 20px;
-    border-right: 2px solid #000;
+    border-right: 2px solid #4B0082; /* Dark Purple Border */
 }
 
 .hero-image {
-    border: 2px solid #000;
+    border: 2px solid #4B0082; /* Dark Purple Border */
     height: 150px;
     display: flex;
     align-items: center;
