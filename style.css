@@ -9,7 +9,6 @@
 
 /* Global Font Setup & Body Margins */
 body {
-    /* Aptos Narrow with standard fallbacks */
     font-family: "Aptos Narrow", "Arial Narrow", "Calibri", sans-serif;
     background-color: #E6E6FA; /* Lavender background */
     color: #4B0082; /* Dark Purple default text */
@@ -20,7 +19,7 @@ body {
 /* Main Outer Container */
 .site-container {
     background-color: #ffffff;
-    border: 2px solid #4B0082; /* Dark Purple Border */
+    border: 2px solid #4B0082;
     margin: 20px 0;
     display: flex;
     flex-direction: column;
@@ -29,12 +28,12 @@ body {
 /* Header Section */
 header {
     display: flex;
-    border-bottom: 2px solid #4B0082; /* Dark Purple Border */
+    border-bottom: 2px solid #4B0082;
 }
 
 .logo-area {
     width: 25%;
-    border-right: 2px solid #4B0082; /* Dark Purple Border */
+    border-right: 2px solid #4B0082;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +47,7 @@ header {
 }
 
 .header-info-graphics {
-    border-bottom: 1px solid #4B0082; /* Dark Purple Border */
+    border-bottom: 1px solid #4B0082;
     padding: 15px;
     font-size: 0.9rem;
 }
@@ -60,34 +59,34 @@ header {
 }
 
 .primary-nav-top, .secondary-nav-top {
-    border-bottom: 1px solid #4B0082; /* Dark Purple Border */
-    padding: 8px 15px;
+    border-bottom: 1px solid #4B0082;
+    padding: 10px 15px;
 }
 
 .secondary-nav-top {
     border-bottom: none;
 }
 
-/* Horizontal styling for Top Navigation Lists */
-.top-nav ul {
-    list-style: none;
+/* Horizontal Layout for Top Navigation Links */
+.top-nav nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
 /* NAVIGATION LINK STYLES (Dark Purple -> Pink on hover) */
 nav a, 
-.top-nav a, 
 .left-sidebar a {
     color: #4B0082; /* Dark Purple */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth hover transition */
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
 }
 
 nav a:hover, 
-.top-nav a:hover, 
 .left-sidebar a:hover {
     color: #FF69B4; /* Pink */
     text-decoration: underline;
@@ -97,13 +96,13 @@ nav a:hover,
 .main-wrapper {
     display: flex;
     flex: 1;
-    border-bottom: 2px solid #4B0082; /* Dark Purple Border */
+    border-bottom: 2px solid #4B0082;
 }
 
 /* Left Sidebar Navigation */
 .left-sidebar {
     width: 20%;
-    border-right: 2px solid #4B0082; /* Dark Purple Border */
+    border-right: 2px solid #4B0082;
     padding: 15px;
 }
 
@@ -127,11 +126,11 @@ nav a:hover,
 .main-content {
     width: 55%;
     padding: 20px;
-    border-right: 2px solid #4B0082; /* Dark Purple Border */
+    border-right: 2px solid #4B0082;
 }
 
 .hero-image {
-    border: 2px solid #4B0082; /* Dark Purple Border */
+    border: 2px solid #4B0082;
     height: 150px;
     display: flex;
     align-items: center;
