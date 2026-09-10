@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const primaryLinks = [
         { name: "Home", url: "index.html" },
-        { name: "About Us", url: "about.html" },
+        { name: "Education", url: "about.html" },
         { name: "Services", url: "services.html" },
         { name: "Email: hadleyb@iastate.edu", url: "mailto:hadleyb@iastate.edu" },
         { name: "Phone: 641-414-1489", url: "tel:6414141489" },
